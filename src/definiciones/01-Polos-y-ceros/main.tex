@@ -1,0 +1,33 @@
+\subsubsection{Ceros}
+
+Un punto $Z_0$ en el plano complejo es un cero de orden $n$ \textit{si}:
+
+\begin{align}
+    f(Z_0) &= f'(Z_0) = f''(Z_0) = ... = f^{n-1}(Z_0) = 0 \label{eq:ceros-1} \\
+    f^{n}(Z_0)& \ne 0 \label{eq:ceros-2}
+\end{align}
+
+La ecuación y todas sus derivadas hasta la derivada $n-1$ son cero (ec \ref{eq:ceros-1}), pero la \textit{enésima} derivada es diferente de cero (ec \ref{eq:ceros-2}).
+
+\subsubsection{Polos}
+
+Se llama \textit{"polos"} o \textit{"singularidades aisladas"} a los puntos ($"Z_0"$ en este caso) en los cuales, al evaluar la función, el denominador se vuelve $0$. Esto hace que la función no pueda ser evaluada en ese punto, y tienda hacia infinito de la siguiente manera
+
+\begin{align}
+    f(Z) &= \frac{g(Z)}{(Z-Z_0)^n} = \frac{g(Z)}{0} \label{eq:polos-1}
+\end{align}
+
+\textbf{Donde:}
+
+\begin{addmargin}[2em]{2em}
+    $\pmb{Z_0}$ es el punto donde el denominador se vuelve cero ($"Z - Z_0 = 0"$) y se indetermina la ecuación \\
+    $\pmb{n}$ es un real entero, y se llama el \textit{"orden"} del polo \\ \\
+    Condicion: $\pmb{g(Z_0)}$ NO puede ser cero en el punto $Z_0$
+\end{addmargin}
+
+% Pendientes:
+%   Multiples polos en la función
+%   Ejemplos
+
+% Pendientes externas
+%   Desarrollo en series geométricas de Sin (Para el ejercicio Sin(z)/z se desarrolla en serie el numerador, como z())

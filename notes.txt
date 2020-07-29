@@ -1,0 +1,5 @@
+Hacer un comando para anotaciones de matemáticas
+
+Hacer un comando para cartas compactas
+
+Hacer un comando para alineacion "Responsiva" de ecuaciones matemáticas (Lineas, columnas)
