@@ -3,3 +3,24 @@ Hacer un comando para anotaciones de matemáticas
 Hacer un comando para cartas compactas
 
 Hacer un comando para alineacion "Responsiva" de ecuaciones matemáticas (Lineas, columnas)
+
+Trucos:
+
+- Referenciar el numero de una ecuación
+\ref{label_name}
+
+- Obtener el numero de página donde está una etiqueta
+\pageref{label_name}
+
+- Link a una etiqueta, con texto personalizado
+\hyperref[label_name]{Cualquier texto que queramos poner}
+
+- Poner llaves bajo una ecuacion:
+\underbrace{ecuaciones}_{\text{nuestro texto}}
+
+- Cancel equations
+\usepackage{cancel}
+    \[ \cancel{xse^x} \]
+
+- Vertical separator
+\hrulefill

@@ -1,0 +1,28 @@
+\textbf{Instrucciones:} Determine la \textit{Serie de Taylor} alrededor del punto $"Z_0 = 0"$ de la siguiente función y halle su \textit{Radio de Convergencia} (R)
+
+\[ h(Z) = \frac{Z-2}{(Z+2)(Z+3)} \]
+
+\textbf{NOTA:} En este ejemplo veremos qué podemos hacer si no podemos reescribir la función en forma de \textit{Serie Geométrica} o una \textit{Serie de Potencias} conocida.
+
+\textbf{Paso 1}: Encontrar el radio, y la singularidad más cercana.
+
+La función dada tiene dos singularidades, una en $Z = -2$ y otra en $Z = -3$. Ya que desarrollaremos alrededor del punto $Z=0$, la singularidad más cercana está en $Z = -2$.
+
+Por tanto, $R$ es la distancia de 0 a -2, osea $R = 2$
+
+\textbf{Paso 2}:
+Ya que no podemos pasarlo directamente a la forma geométrica, usaremos \textit{Fracciones Parciales}
+
+\begin{align}
+    \frac{Z-2}{(Z+2)(Z+3)} &= \frac{A}{Z+2} + \frac{B}{Z+3}
+        &\text{ Planteamos las fracciones parciales} \nonumber \\
+    \Bigl[
+            \frac{Z-2}{(Z+2)(Z+3)} &= \frac{A}{Z+2} + \frac{B}{Z+3}
+        \Bigr] (Z+2)(Z+3)
+        & \text{Multiplicamos por el denominador original} \nonumber \\
+    (Z-2) \cancelto{1}{\frac{(Z+2)}{(Z+2)}} \cancelto{1}{\frac{(Z+3)}{(Z+3)}}
+        &=A(Z+3) \cancelto{1}{\frac{Z+2}{Z+2}} 
+        + B(Z+2)\cancelto{1}{\frac{Z+3}{Z+3}}
+        & \text{Anulamos términos} \nonumber \\
+    (Z-2) &= A(Z+3) + B(Z+2)
+\end{align}

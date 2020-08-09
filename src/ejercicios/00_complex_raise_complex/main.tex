@@ -1,0 +1,52 @@
+\subsection{Un número complejo elevado a otro número complejo}
+
+\textbf{Instrucciones: } Obtenga el valor de \[ (a + bi)^{c + di} \]
+
+\textbf{Paso 1}: Convertimos $a + bi$ a su forma polar
+
+\begin{align}
+    a + bi &= re^{i\theta} & \nonumber \\
+    \textbf{Donde} & \nonumber \\
+    r &= \sqrt{a^2 + b^2} \label{eq:CompPowComp_r} \\
+    \theta &= \text{Arg}(a + ib) \label{eq:CompPowComp_theta}
+\end{align}
+
+\textbf{Paso 2}: Elevamos a la potencia y expandimos, para separar términos
+
+\begin{align*}
+    (re^{i\theta})^{c + di} &=
+        (re^{i\theta})^c * (re^{i\theta})^{di} &
+        \text{Separamos el exponente} \\
+    &= r^c e^{ic\theta} r^{di} e^{-1d\theta} & \text{Elevamos y simplificamos las i's}
+\end{align*}
+
+\textbf{Paso 3}: Hacemos $e^{\ln}$ para poder trabajar con el argumento $r^{di}$
+
+\begin{align*}
+    &= r^c e^{ic\theta} e^{\ln(r^{di})} e^{-d\theta} & \text{Elevamos y simplificamos las i's} \\
+    &= r^c e^{ic\theta} e^{di\ln(r)} e^{-d\theta} & \text{Usamos propiedades de logaritmos} \\
+    &= r^c e^{-d\theta} e^{i(c\theta + d\ln(r))} & \text{Agrupamos}
+\end{align*}
+
+Ya tenemos la \textit{Respuesta en forma polar}, (un número real multiplicando $e^{i(algo)}$). Sin embargo, seguiremos el ejercicio hasta la forma estándar
+
+\textbf{Paso 4}: Convertimos la $e^{i(algo)}$ usando la formula de Euler.
+
+\begin{align}
+    &= r^c e^{-d\theta} \underbrace{
+            \bigl[ \cos(c\theta + d\ln(r)) + i\sin(c\theta + d\ln(r)) \bigr]
+        }_{e^{i(c\theta + d\ln(r))}}  & \text{Agrupamos}
+        \label{eq:CompPowComp_small}
+\end{align}
+
+\textbf{Paso 5}: Ahora, si recordamos los valores de $r$ y $\theta$ (Ver (\ref{eq:CompPowComp_r}) y (\ref{eq:CompPowComp_theta})) en la ecuación que acabamos de desarrollar (\ref{eq:CompPowComp_small}), obtenemos una fórmula general.
+
+\begin{gather}
+    (a + bi)^{c + di} = \nonumber \\
+    \boxed{
+        (\sqrt{a^2 + b^2})^c e^{-d\text{Arg}(a + ib)}
+            \bigl[ \cos(c\text{Arg}(a + ib) + d\ln(\sqrt{a^2 + b^2})) + i\sin(c\text{Arg}(a + ib) + d\ln(\sqrt{a^2 + b^2})) \bigr]
+    } \label{eq:CompPowComp_formula}
+\end{gather}
+
+A probar la fórmula!! La usaremos para encontrar el valor del número $(1 + i)^{1 + i}$ en un futuro. Ya que en este caso $a = b = c = d = 1$, se simplificarán algunos cálculos.

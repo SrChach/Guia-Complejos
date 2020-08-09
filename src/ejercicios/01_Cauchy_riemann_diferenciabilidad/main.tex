@@ -1,0 +1,35 @@
+\subsection{Cauchy-riemann y diferenciabilidad}
+
+Determina si alguna de las siguientes funciones es diferenciable y si lo es, determine \( f'(z) \)
+
+\begin{align}
+    f(z) &= x - iy & \text{ funcion original } \nonumber \\
+    u(x, y) = x &\text{ \& } v(x, y) = -y
+        & \text{separando partes real e imaginaria} \nonumber \\
+    \frac{\partial u}{\partial x}=1 \text{ \& } 
+        &\frac{\partial v}{\partial y}=-1 \text{ \& }
+        \frac{\partial u}{\partial y}=0 \text{ \& }
+        \frac{\partial v}{\partial x}=0
+        & \text{Las parciales existen y son continuas}
+        \nonumber \\
+    \frac{\partial u}{\partial x}\neq\frac{\partial v}{\partial y}
+        & & \nonumber
+\end{align}
+
+Dado que las CCR no se cumplen, la función \textbf{no es diferenciable}.
+
+\begin{align}
+    f(z) &= x^2 - y^2 + i2xy & \text{ funcion original } \nonumber \\
+    u(x, y) &= x^2 - y^2 \text{  \&  } v(x, y) = 2xy
+        & \text{Separando partes real e imaginaria} \nonumber \\
+    \frac{\partial u}{\partial x}=2x \text{ \& } 
+        &\frac{\partial v}{\partial y}=2x \text{ \& }
+        \frac{\partial u}{\partial y}=-2y \text{ \& }
+        \frac{\partial v}{\partial x}=2y
+        & \text{Las parciales existen y son continuas}
+        \nonumber \\
+    \frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}
+        & \text{ \& } \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} & \nonumber
+\end{align}
+
+Para esta función, derivadas son continuas en el plano complejo, y cumplen con las CCR. Por tanto, es diferenciable. El resultado de la derivada es: \( f'(z) = 2x + i2y \).

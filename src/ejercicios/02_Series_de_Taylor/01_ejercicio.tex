@@ -1,0 +1,45 @@
+\textbf{Instrucciones:} Determine la \textit{Serie de Taylor} de la siguiente función $f(Z)$ alrededor del punto $Z = 0$ y halle su \textit{Radio de Convergencia} \[ f(Z) = \frac{1}{2 + Z} \]
+
+\textbf{Paso 1}: Encontrar el radio, y la singularidad más cercana.
+
+Como se desarrolla alrededor de $Z_0$ y el polo está en $2 + Z = 0$, el origen es $Z_0$ y el polo se encuentra en $Z = -2$. El radio \textit{R} es entonces 2
+
+\textbf{Paso 2}: Pensando en pasar a la forma geométrica
+
+\input{src/formulas/00_Basic/serie_geometrica}
+
+La razón por la que usamos esta serie geométrica es por que si insertamos $Z - Z_0$, obtenemos algo muy parecido a nuestra definición de Serie de Taylor alrededor de ese punto.
+
+\begin{align}
+    f(Z) &= \frac{1}{2 + Z} =  \frac{1}{2} \left[ \frac{1}{1 - (-\frac{Z}{2})}\right] &\text{Factorizamos} \nonumber
+\end{align}
+
+Se factoriza y re-escribe para que quede de la forma \( \frac{1}{1 - w} \). En este caso $w = -\frac{Z}{2}$
+
+\textbf{Paso 3}: Lo transformamos en una serie/sumatoria usando la \textit{Serie Geométrica}
+
+\begin{align}
+    \frac{1}{1-w} &= \sum_{n=0}^{\infty} (w)^n &\text{Fórmula} \nonumber \\
+    \frac{1}{2} \left[ \frac{1}{1 - (-\frac{Z}{2})}\right] &=
+        \frac{1}{2} \sum_{n=0}^{\infty} \left(-\frac{Z}{2}\right)^n
+        &\text{Aplicamos la fórmula} \nonumber \\
+    &= \sum_{n=0}^{\infty} (-1)^n \frac{Z^n}{2^{n+1}}
+        &\text{Simplificamos la serie} \nonumber
+\end{align}
+
+Ahora ya tenemos el resultado, pero aún nos falta saber el \textit{Radio de Convergencia}. La fórmula dicta que es válido para $|w| < 1$, pero en este caso $w = -\frac{Z}{2}$, así que sustituimos:
+
+\begin{align}
+    |w| < 1 &\longrightarrow |\underbrace{-\frac{Z}{2}}_{w}| < 1
+        & \text{Sustituimos} \nonumber \\
+    \left| \frac{Z}{2} \right| < 1 &\longrightarrow
+        \frac{|Z|}{2} < 1 & \text{Simplificamos} \nonumber \\
+    &= \underbrace{|Z| < 2}_{\text{radio de convergencia}} \nonumber
+\end{align}
+
+Así, decimos que la serie de 
+Taylor de \( \frac{1}{1+Z} \) es:
+
+\begin{align}
+    \sum_{n=0}^{\infty} (-1)^n \frac{Z^n}{2^{n+1}} \text{, Para } |-\frac{Z}{2}| < 1 \nonumber
+\end{align}
